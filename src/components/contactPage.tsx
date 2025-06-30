@@ -140,8 +140,8 @@ const ContactPage: React.FC = () => {
         {submitStatus === "success" && (
           <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
             <Body textColour="text-green-400">
-              Thank you! Your message has been sent successfully. I'll get back
-              to you soon.
+              Thank you! Your message has been sent successfully. I&apos;ll get
+              back to you soon.
             </Body>
           </div>
         )}

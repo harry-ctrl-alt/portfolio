@@ -1,5 +1,5 @@
 import React from "react";
-import { Linkedin, Github, Chrome, Twitter } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 
 const SocialLinks: React.FC = () => {
   const links = [
