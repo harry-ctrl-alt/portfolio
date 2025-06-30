@@ -2,10 +2,10 @@
 
 import React from "react";
 import { GraduationCap, Briefcase } from "lucide-react";
-import { Heading, SubHeading, Title, Body } from "../components/text";
-import IconBox from "../components/icon";
-import Divider from "../components/divider";
-import Button from "../components/button";
+import { Heading, SubHeading, Title, Body } from "../../components/text";
+import IconBox from "../../components/icon";
+import Divider from "../../components/divider";
+import Button from "../../components/button";
 
 interface TimelineItemProps {
   title: string;

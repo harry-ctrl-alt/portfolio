@@ -1,6 +1,6 @@
-import Divider from "../components/divider";
-import JobCard from "../components/jobCard";
-import { Heading } from "../components/text";
+import Divider from "../../components/divider";
+import JobCard from "../../components/jobCard";
+import { Heading } from "../../components/text";
 
 export default function Portfolio() {
   return (
