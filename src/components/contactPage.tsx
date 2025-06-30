@@ -1,10 +1,11 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Send, MessageCircle } from "lucide-react";
 import { Heading, SubHeading, Body } from "../components/text";
 import SummaryCard from "../components/summaryCard";
 import Divider from "./divider";
+import emailjs from "@emailjs/browser";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -15,6 +16,14 @@ const ContactPage: React.FC = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<
+    "idle" | "success" | "error"
+  >("idle");
+
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init("PVlx1ZsJTdIk2y9_X"); // You'll replace this with your actual public key
+  }, []);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -26,24 +35,46 @@ const ContactPage: React.FC = () => {
     }));
   };
 
+  // Update the handleSubmit function in your ContactPage component
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const templateParams = {
+        name: formData.name, // {{name}} in template
+        email: formData.email, // {{email}} in template
+        subject: formData.subject, // {{subject}} in template (if you add it to template)
+        message: formData.message, // {{message}} in template
+        time: new Date().toLocaleString(), // {{time}} in template
+      };
 
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    });
-    setIsSubmitting(false);
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        "service_dupumbh",
+        "template_hc1vts3",
+        templateParams,
+        "PVlx1ZsJTdIk2y9_X"
+      );
 
-    // You would typically send the data to your backend here
-    console.log("Form submitted:", formData);
+      console.log("Email sent successfully:", result);
+      setSubmitStatus("success");
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Failed to send email:", error);
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -104,6 +135,25 @@ const ContactPage: React.FC = () => {
         <SubHeading bold className="mb-6">
           Send a Message
         </SubHeading>
+
+        {/* Success/Error Messages */}
+        {submitStatus === "success" && (
+          <div className="mb-6 p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
+            <Body textColour="text-green-400">
+              Thank you! Your message has been sent successfully. I'll get back
+              to you soon.
+            </Body>
+          </div>
+        )}
+
+        {submitStatus === "error" && (
+          <div className="mb-6 p-4 bg-red-500/10 border border-red-500/20 rounded-lg">
+            <Body textColour="text-red-400">
+              Sorry, there was an error sending your message. Please try again
+              or contact me directly via email.
+            </Body>
+          </div>
+        )}
 
         <div className="group relative rounded-2xl transition-all duration-200">
           <div
