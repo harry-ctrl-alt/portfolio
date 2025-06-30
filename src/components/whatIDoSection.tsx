@@ -1,27 +1,27 @@
-import { Code, Smartphone, Palette, Server } from "lucide-react";
+import { Code, GitBranch, Users, Rocket } from "lucide-react";
 import { SubHeading } from "./text";
 import SummaryCard from "./summaryCard";
 
 const items = [
   {
-    icon: <Smartphone size={24} className="text-blue-400" />,
-    title: "Mobile Apps",
-    desc: "Professional development of applications for Android and iOS.",
-  },
-  {
     icon: <Code size={24} className="text-blue-400" />,
-    title: "Web Development",
-    desc: "High-quality development of sites at the professional level.",
+    title: "Frontend Development",
+    desc: "React applications with Next.js, TypeScript, and Tailwind CSS. Built component libraries using Storybook for consistent, reusable UI components with comprehensive testing coverage.",
   },
   {
-    icon: <Palette size={24} className="text-blue-400" />,
-    title: "UI/UX Design",
-    desc: "The most modern and high-quality design made at a professional level.",
+    icon: <GitBranch size={24} className="text-blue-400" />,
+    title: "Full-Stack Integration",
+    desc: "Integrated REST APIs with frontend applications, handled authentication flows using AWS Cognito, and worked with Lambda functions for user management and backend services.",
   },
   {
-    icon: <Server size={24} className="text-blue-400" />,
-    title: "Backend Development",
-    desc: "High-performance backend services designed for scalability and seamless user experience.",
+    icon: <Users size={24} className="text-blue-400" />,
+    title: "Team Collaboration & Development Practices",
+    desc: "Experience with Git workflows, PR reviews, sprint retrospectives, and agile development. Managed tickets through Linear and maintained high code quality with extensive unit testing using Jest.",
+  },
+  {
+    icon: <Rocket size={24} className="text-blue-400" />,
+    title: "Production-Ready Features",
+    desc: "Built complex user flows including wallet creation, order processing, and multi-organization user management. Implemented feature flags, error handling, and responsive design for real-world applications.",
   },
 ];
 
