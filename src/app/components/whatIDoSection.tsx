@@ -28,7 +28,7 @@ const items = [
 const WhatIDoSection = () => (
   <section className="mb-8">
     <SubHeading className="mb-4" bold>
-      What I'm Doing
+      What I&apos;m Doing
     </SubHeading>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {items.map((item, idx) => (

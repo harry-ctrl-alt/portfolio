@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { GraduationCap, Briefcase, FileText } from "lucide-react";
+import { GraduationCap, Briefcase } from "lucide-react";
 import { Heading, SubHeading, Title, Body } from "../components/text";
 import IconBox from "../components/icon";
 import Divider from "../components/divider";

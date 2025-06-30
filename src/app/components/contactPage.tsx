@@ -76,8 +76,8 @@ const ContactPage: React.FC = () => {
         <Heading bold>Contact Me</Heading>
         <Divider />
         <Body size="large" textColour="text-gray-300">
-          Have a project in mind or want to discuss opportunities? I'd love to
-          hear from you. Feel free to reach out through any of the methods
+          Have a project in mind or want to discuss opportunities? I&apos;d love
+          to hear from you. Feel free to reach out through any of the methods
           below.
         </Body>
       </div>

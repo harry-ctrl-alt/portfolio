@@ -1,6 +1,6 @@
 import Divider from "../components/divider";
 import JobCard from "../components/jobCard";
-import { Heading, Body } from "../components/text";
+import { Heading } from "../components/text";
 
 export default function Portfolio() {
   return (
