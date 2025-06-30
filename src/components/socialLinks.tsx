@@ -5,23 +5,13 @@ const SocialLinks: React.FC = () => {
   const links = [
     {
       icon: <Linkedin size={15} />,
-      href: "https://linkedin.com/in/harrymurray",
+      href: "https://linkedin.com/in/harry-ban-murray",
       label: "LinkedIn",
     },
     {
       icon: <Github size={15} />,
       href: "https://github.com/harry-ctrl-alt",
       label: "GitHub",
-    },
-    {
-      icon: <Chrome size={15} />,
-      href: "https://harrymurray.dev",
-      label: "Website",
-    },
-    {
-      icon: <Twitter size={15} />,
-      href: "https://twitter.com/harrymurray",
-      label: "Twitter",
     },
   ];
 

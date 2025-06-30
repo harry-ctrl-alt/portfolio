@@ -50,7 +50,7 @@ const ContactPage: React.FC = () => {
     {
       icon: <Mail size={24} className="text-blue-400" />,
       title: "Email",
-      desc: "harry@harrymurray.dev",
+      desc: "harrymurray088@gmail.com",
     },
     {
       icon: <Phone size={24} className="text-blue-400" />,
