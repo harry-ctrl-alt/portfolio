@@ -102,7 +102,7 @@ const ResumePage: React.FC = () => {
     {
       title: "Ulster University Belfast - Software Engineering",
       subtitle:
-        "Year 1 Average - 65%, Year 2 Average: 66%, Year 3: 74%, Year 4: In Progress",
+        "Year 1 Average - 65%, Year 2 Average: 66%, Year 3: TBD, Year 4: In Progress",
       period: "2021 - Present",
       location: "",
       current: true,

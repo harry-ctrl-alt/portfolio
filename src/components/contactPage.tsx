@@ -6,6 +6,7 @@ import { Heading, SubHeading, Body } from "../components/text";
 import SummaryCard from "../components/summaryCard";
 import Divider from "./divider";
 import emailjs from "@emailjs/browser";
+import Button from "../components/button";
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -284,61 +285,21 @@ const ContactPage: React.FC = () => {
               </div>
 
               {/* Submit Button */}
+
               <div className="flex justify-end">
-                <button
-                  type="submit"
+                <Button
+                  text={isSubmitting ? "Sending... " : "Send Message"}
+                  icon={
+                    <Send
+                      size={18}
+                      className={`relative z-10 transition-transform duration-200 ${
+                        isSubmitting ? "animate-pulse" : ""
+                      }`}
+                    />
+                  }
                   disabled={isSubmitting}
-                  className="
-                    relative group
-                    flex items-center gap-2.5 
-                    px-8 py-4
-                    bg-gradient-to-r from-blue-500/10 to-purple-500/10
-                    border border-blue-500/20
-                    text-gray-300
-                    font-medium text-sm uppercase tracking-wider
-                    rounded-lg
-                    transition-all duration-300
-                    hover:border-blue-400/40
-                    hover:text-white
-                    hover:shadow-[0_0_30px_rgba(59,130,246,0.3)]
-                    hover:translate-y-[-2px]
-                    disabled:opacity-50 disabled:cursor-not-allowed
-                    disabled:hover:translate-y-0 disabled:hover:shadow-none
-                    overflow-hidden
-                  "
-                >
-                  {/* Gradient background on hover */}
-                  <div
-                    className="
-                      absolute inset-0 
-                      bg-gradient-to-r from-blue-500/20 to-purple-500/20
-                      opacity-0 group-hover:opacity-100
-                      transition-opacity duration-300
-                    "
-                  />
-
-                  {/* Content */}
-                  <Send
-                    size={18}
-                    className={`relative z-10 transition-transform duration-200 ${
-                      isSubmitting ? "animate-pulse" : ""
-                    }`}
-                  />
-                  <span className="relative z-10">
-                    {isSubmitting ? "Sending..." : "Send Message"}
-                  </span>
-
-                  {/* Subtle gradient border glow */}
-                  <div
-                    className="
-                      absolute inset-0 rounded-lg
-                      bg-gradient-to-r from-blue-400 to-purple-400
-                      opacity-0 group-hover:opacity-20
-                      blur-xl
-                      transition-opacity duration-300
-                    "
-                  />
-                </button>
+                  type="submit"
+                />
               </div>
             </form>
           </div>

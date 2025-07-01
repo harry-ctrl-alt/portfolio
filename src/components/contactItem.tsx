@@ -22,11 +22,11 @@ const ContactItem: React.FC<ContactItemProps> = ({
       <IconBox size="md" variant="default" withHoverEffect>
         {icon}
       </IconBox>
-      <div className="flex flex-col overflow-hidden">
+      <div className="flex flex-col flex-1 min-w-0 overflow-hidden">
         <Body size="small" textColour="text-gray-400">
           {label}
         </Body>
-        <Body className="truncate">{value}</Body>
+        <Body className="break-all">{value}</Body>
       </div>
     </div>
   );

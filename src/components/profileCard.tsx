@@ -7,13 +7,19 @@ import ContactItem from "./contactItem";
 const ProfileCard = () => (
   <div className="flex flex-col items-center bg-neutral-900 rounded-2xl p-8 w-full gap-6 shadow-lg border border-neutral-600">
     <div className="flex flex-col items-center gap-2">
-      <Image
-        src="/portfolio-image.png"
-        alt="Profile"
-        width={200}
-        height={150}
-        className="rounded-2xl"
-      />
+      <div className="relative">
+        <div className="rounded-full bg-green-500 w-4 h-4 absolute bottom-[-4px] right-[-4px]">
+          <div className="absolute inset-0 rounded-full bg-green-400 animate-ping" />
+          <div className="relative rounded-full bg-green-500 w-full h-full" />
+        </div>
+        <Image
+          src="/portfolio-image.png"
+          alt="Profile"
+          width={200}
+          height={150}
+          className="rounded-2xl"
+        />
+      </div>
       <SubHeading bold large className="mt-2">
         Harry Murray
       </SubHeading>

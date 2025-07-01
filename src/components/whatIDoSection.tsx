@@ -6,22 +6,22 @@ const items = [
   {
     icon: <Code size={24} className="text-blue-400" />,
     title: "Frontend Development",
-    desc: "React applications with Next.js, TypeScript, and Tailwind CSS. Built component libraries using Storybook for consistent, reusable UI components with comprehensive testing coverage.",
+    desc: "React applications with Next.js, TypeScript, and Tailwind CSS. Built component libraries using Storybook for consistent, reusable UI components.",
   },
   {
     icon: <GitBranch size={24} className="text-blue-400" />,
     title: "Full-Stack Integration",
-    desc: "Integrated REST APIs with frontend applications, handled authentication flows using AWS Cognito, and worked with Lambda functions for user management and backend services.",
+    desc: "Integrated REST APIs with frontend applications, and worked with AWS Cognito for handling user authentication flows.",
   },
   {
     icon: <Users size={24} className="text-blue-400" />,
     title: "Team Collaboration & Development Practices",
-    desc: "Experience with Git workflows, PR reviews, sprint retrospectives, and agile development. Managed tickets through Linear and maintained high code quality with extensive unit testing using Jest.",
+    desc: "Experience with Git workflows, PR reviews, sprint retrospectives, and agile development. Managed tickets through Linear and maintained high code quality.",
   },
   {
     icon: <Rocket size={24} className="text-blue-400" />,
     title: "Production-Ready Features",
-    desc: "Built complex user flows including wallet creation, order processing, and multi-organization user management. Implemented feature flags, error handling, and responsive design for real-world applications.",
+    desc: "Built complex fullt-stack features including wallet creation, order processing, and multi-organisation user management for real-world applications.",
   },
 ];
 

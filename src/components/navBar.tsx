@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
+export const navLinks = [
   { name: "About", href: "/" },
   { name: "Resume", href: "/resume" },
   { name: "Portfolio", href: "/portfolio" },
@@ -25,7 +25,7 @@ const NavBar = () => {
       "
     >
       <div className="flex flex-col sm:flex-row w-full">
-        {links.map((link) => {
+        {navLinks.map((link) => {
           const isActive = pathname === link.href;
           return (
             <Link
