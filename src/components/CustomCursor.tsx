@@ -23,7 +23,6 @@ const CustomCursor: React.FC = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [visible, setVisible] = useState(true);
   const [active, setActive] = useState(false); // Interactive state
-  const requestRef = useRef<number | null>(null);
   const cursorRef = useRef<HTMLDivElement>(null);
   const dotRef = useRef<HTMLDivElement>(null);
 
