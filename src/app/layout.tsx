@@ -5,6 +5,7 @@ import ProfileCard from "../components/profileCard";
 import NavBar from "../components/navBar";
 import HamburgerMenu from "../components/HamburgerMenu";
 import Container from "../components/container";
+import CustomCursor from "../components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,7 +31,9 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen bg-neutral-950 subtle-grid-background flex flex-col items-center py-6 px-4`}
+        style={{ cursor: "none" }}
       >
+        <CustomCursor />
         <div className="flex flex-col lg:flex-row gap-8 w-full max-w-6xl mt-4">
           <aside className="w-full lg:w-[340px] lg:sticky lg:top-8 h-fit">
             <ProfileCard />

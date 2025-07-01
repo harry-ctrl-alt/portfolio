@@ -65,3 +65,13 @@ body {
     );
   background-size: 24px 24px, 24px 24px, 100% 100%;
 }
+
+/* Hide default cursor for custom cursor effect (non-touch devices only) */
+html:not(.touch), body:not(.touch) {
+  cursor: none !important;
+}
+
+/* Utility class to disable custom cursor if needed */
+.disable-custom-cursor {
+  cursor: auto !important;
+}

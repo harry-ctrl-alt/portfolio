@@ -91,7 +91,7 @@ const Button = ({
       type={type}
       onClick={type === "submit" ? undefined : handleAction}
       disabled={disabled}
-      className={`${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]}`}
+      className={`cursor-none ${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]}`}
     >
       {/* Subtle hover background - only show when not disabled */}
       <div

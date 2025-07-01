@@ -22,7 +22,7 @@ const JobCard: React.FC<JobCardProps> = ({
   tags = [],
 }) => {
   return (
-    <div className="group relative h-full rounded-2xl transition-transform duration-200 hover:scale-[1.01]">
+    <div className="group relative h-full rounded-2xl transition-transform duration-200 hover:scale-[1.01] cursor-none">
       {/* Main card container */}
       <div
         className="
@@ -37,13 +37,14 @@ const JobCard: React.FC<JobCardProps> = ({
         group-hover:shadow-xl
         group-hover:border-neutral-600/60
         group-hover:translate-y-[-1px]
+        cursor-none
       "
       >
         <Link
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex flex-col h-full"
+          className="flex flex-col h-full cursor-none"
         >
           {/* Image container */}
           <div className="relative overflow-hidden rounded-t-2xl">

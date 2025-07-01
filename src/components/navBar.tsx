@@ -31,8 +31,7 @@ const NavBar = () => {
             <Link
               key={link.name}
               href={link.href}
-              className={`
-                flex-1 px-3 sm:px-4 py-2 sm:py-2.5 text-center
+              className={`cursor-none flex-1 px-3 sm:px-4 py-2 sm:py-2.5 text-center
                 text-sm sm:text-[15px] font-medium
                 transition-all duration-200
                 whitespace-nowrap

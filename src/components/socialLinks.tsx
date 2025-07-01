@@ -23,7 +23,7 @@ const SocialLinks: React.FC = () => {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="
+          className="cursor-none
             w-8 h-8
             bg-neutral-800 
             border border-neutral-600 
